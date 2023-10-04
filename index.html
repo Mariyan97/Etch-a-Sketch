@@ -8,15 +8,19 @@
     <script src="app.js" defer></script>
   </head>
   <body>
+    <h1>Etch-A-Sketch</h1>
     <div class="main">
       <div class="buttons-wrapper">
         <input type="color" id="color-picker" value="#000000" />
         <label for="color-picker"></label>
+        <button id="color-mode-button">Color Mode</button>
+        <button id="eraser-button">Eraser</button>
         <input type="range" id="slider" min="2" max="64" step="1" value="16" />
         <p id="grid-info"></p>
         <button id="clear-button">Clear</button>
       </div>
       <div id="container"></div>
+      <div class="empty"></div>
     </div>
   </body>
 </html>
