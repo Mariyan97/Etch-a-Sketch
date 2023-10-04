@@ -8,11 +8,23 @@
 }
 
 .cell {
-  border: 1px solid #ccc;
   background-color: white;
 }
 
 #clear-button {
   display: block;
   margin-top: 10px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }

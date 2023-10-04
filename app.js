@@ -1,9 +1,11 @@
 const container = document.getElementById("container");
 const clearButton = document.getElementById("clear-button");
 const slider = document.getElementById("slider");
+const colorPicker = document.getElementById("color-picker");
+let currentColor = colorPicker.value;
 
 function createGrid(rows, cols) {
-  container.innerHTML = ""; // Изчистваме всички съществуващи елементи
+  container.innerHTML = "";
 
   container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
@@ -14,7 +16,7 @@ function createGrid(rows, cols) {
     container.appendChild(cell);
 
     cell.addEventListener("mouseover", () => {
-      cell.style.backgroundColor = "black";
+      cell.style.backgroundColor = currentColor;
     });
   }
 }
@@ -34,3 +36,7 @@ slider.addEventListener("input", () => {
 createGrid(16, 16);
 
 clearButton.addEventListener("click", clearGrid);
+
+colorPicker.addEventListener("input", () => {
+  currentColor = colorPicker.value;
+});

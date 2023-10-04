@@ -8,8 +8,14 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div id="container"></div>
-    <input type="range" id="slider" min="2" max="64" step="1" value="16" />
-    <button id="clear-button">Clear</button>
+    <div class="main">
+      <div class="buttons-wrapper">
+        <input type="color" id="color-picker" value="#000000" />
+        <label for="color-picker">Select Color</label>
+        <input type="range" id="slider" min="2" max="64" step="1" value="16" />
+        <button id="clear-button">Clear</button>
+      </div>
+      <div id="container"></div>
+    </div>
   </body>
 </html>
