@@ -1,7 +1,10 @@
 const container = document.getElementById("container");
 const clearButton = document.getElementById("clear-button");
+const slider = document.getElementById("slider");
 
 function createGrid(rows, cols) {
+  container.innerHTML = ""; // Изчистваме всички съществуващи елементи
+
   container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 
@@ -22,7 +25,12 @@ function clearGrid() {
     cell.style.backgroundColor = "white";
   });
 }
+slider.addEventListener("input", () => {
+  const gridSize = slider.value;
+  clearGrid();
+  createGrid(gridSize, gridSize);
+});
+
+createGrid(16, 16);
 
 clearButton.addEventListener("click", clearGrid);
-
-createGrid(16, 16); // default 16x16 grid!
