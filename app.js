@@ -2,6 +2,7 @@ const container = document.getElementById("container");
 const clearButton = document.getElementById("clear-button");
 const slider = document.getElementById("slider");
 const colorPicker = document.getElementById("color-picker");
+const gridInfo = document.getElementById("grid-info");
 let currentColor = colorPicker.value;
 
 function createGrid(rows, cols) {
@@ -19,6 +20,7 @@ function createGrid(rows, cols) {
       cell.style.backgroundColor = currentColor;
     });
   }
+  gridInfo.textContent = `${rows}x${cols}`;
 }
 
 function clearGrid() {
@@ -40,3 +42,5 @@ clearButton.addEventListener("click", clearGrid);
 colorPicker.addEventListener("input", () => {
   currentColor = colorPicker.value;
 });
+
+displayColums.textContent = gridSize;
