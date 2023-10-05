@@ -60,11 +60,13 @@ eraserButton.addEventListener("click", () => {
 function handleButtonClick(button) {
   button.addEventListener("click", () => {
     const isActive = button.classList.contains("active-button");
-
     if (isActive) {
       button.classList.remove("active-button");
     } else {
       button.classList.add("active-button");
+      const otherButton =
+        button === colorModeButton ? eraserButton : colorModeButton;
+      otherButton.classList.remove("active-button");
     }
   });
 }
