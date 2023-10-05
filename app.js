@@ -56,3 +56,18 @@ colorModeButton.addEventListener("click", () => {
 eraserButton.addEventListener("click", () => {
   isColorMode = false;
 });
+
+function handleButtonClick(button) {
+  button.addEventListener("click", () => {
+    const isActive = button.classList.contains("active-button");
+
+    if (isActive) {
+      button.classList.remove("active-button");
+    } else {
+      button.classList.add("active-button");
+    }
+  });
+}
+
+handleButtonClick(colorModeButton);
+handleButtonClick(eraserButton);
