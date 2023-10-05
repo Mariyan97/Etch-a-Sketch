@@ -81,10 +81,30 @@ button {
   border: none;
   background-color: #ccc8aa;
   font-size: 16px;
+  transition: 125ms ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.1);
 }
 
 .active-button {
   background-color: #191717;
   color: #ccc8aa;
   border: 1px solid #ccc8aa;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  transition: 125ms ease-in-out;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
